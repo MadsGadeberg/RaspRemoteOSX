@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		095847EE19D5839A00AFEFDD /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095847EC19D5839A00AFEFDD /* SettingsWindowController.swift */; };
+		095847EF19D5839A00AFEFDD /* SettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095847ED19D5839A00AFEFDD /* SettingsWindowController.xib */; };
+		0973718119D30EE400DCA4FC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973718019D30EE400DCA4FC /* main.swift */; };
+		0973718519D30EE400DCA4FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973718419D30EE400DCA4FC /* AppDelegate.swift */; };
+		0973718719D30EE400DCA4FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0973718619D30EE400DCA4FC /* Images.xcassets */; };
+		0973718A19D30EE400DCA4FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0973718819D30EE400DCA4FC /* Main.storyboard */; };
+		0973719619D30EE400DCA4FC /* RaspRemoteOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973719519D30EE400DCA4FC /* RaspRemoteOSXTests.swift */; };
+		097371A019D324E700DCA4FC /* 16*16.png in Resources */ = {isa = PBXBuildFile; fileRef = 0973719F19D324E700DCA4FC /* 16*16.png */; };
+		0976741619D43CEF004A3C5F /* TcpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976741519D43CEF004A3C5F /* TcpService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0973719019D30EE400DCA4FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0973717319D30EE400DCA4FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0973717A19D30EE400DCA4FC;
+			remoteInfo = RaspRemoteOSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		095847EC19D5839A00AFEFDD /* SettingsWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		095847ED19D5839A00AFEFDD /* SettingsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsWindowController.xib; sourceTree = "<group>"; };
+		0973717B19D30EE400DCA4FC /* RaspRemoteOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaspRemoteOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0973717F19D30EE400DCA4FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0973718019D30EE400DCA4FC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0973718419D30EE400DCA4FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0973718619D30EE400DCA4FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0973718919D30EE400DCA4FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0973718F19D30EE400DCA4FC /* RaspRemoteOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaspRemoteOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0973719419D30EE400DCA4FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0973719519D30EE400DCA4FC /* RaspRemoteOSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaspRemoteOSXTests.swift; sourceTree = "<group>"; };
+		0973719F19D324E700DCA4FC /* 16*16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "16*16.png"; sourceTree = "<group>"; };
+		0976741519D43CEF004A3C5F /* TcpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TcpService.swift; sourceTree = "<group>"; };
+		0976741919D442DA004A3C5F /* RaspRemoteOSX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RaspRemoteOSX-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0973717819D30EE400DCA4FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0973718C19D30EE400DCA4FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0973717219D30EE400DCA4FC = {
+			isa = PBXGroup;
+			children = (
+				0973717D19D30EE400DCA4FC /* RaspRemoteOSX */,
+				0973719219D30EE400DCA4FC /* RaspRemoteOSXTests */,
+				0973717C19D30EE400DCA4FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0973717C19D30EE400DCA4FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0973717B19D30EE400DCA4FC /* RaspRemoteOSX.app */,
+				0973718F19D30EE400DCA4FC /* RaspRemoteOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0973717D19D30EE400DCA4FC /* RaspRemoteOSX */ = {
+			isa = PBXGroup;
+			children = (
+				0976741919D442DA004A3C5F /* RaspRemoteOSX-Bridging-Header.h */,
+				0973718419D30EE400DCA4FC /* AppDelegate.swift */,
+				0976741519D43CEF004A3C5F /* TcpService.swift */,
+				0973718819D30EE400DCA4FC /* Main.storyboard */,
+				0973718619D30EE400DCA4FC /* Images.xcassets */,
+				0973717E19D30EE400DCA4FC /* Supporting Files */,
+				095847EC19D5839A00AFEFDD /* SettingsWindowController.swift */,
+				095847ED19D5839A00AFEFDD /* SettingsWindowController.xib */,
+			);
+			path = RaspRemoteOSX;
+			sourceTree = "<group>";
+		};
+		0973717E19D30EE400DCA4FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0973719F19D324E700DCA4FC /* 16*16.png */,
+				0973717F19D30EE400DCA4FC /* Info.plist */,
+				0973718019D30EE400DCA4FC /* main.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0973719219D30EE400DCA4FC /* RaspRemoteOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				0973719519D30EE400DCA4FC /* RaspRemoteOSXTests.swift */,
+				0973719319D30EE400DCA4FC /* Supporting Files */,
+			);
+			path = RaspRemoteOSXTests;
+			sourceTree = "<group>";
+		};
+		0973719319D30EE400DCA4FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0973719419D30EE400DCA4FC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0973717A19D30EE400DCA4FC /* RaspRemoteOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0973719919D30EE400DCA4FC /* Build configuration list for PBXNativeTarget "RaspRemoteOSX" */;
+			buildPhases = (
+				0973717719D30EE400DCA4FC /* Sources */,
+				0973717819D30EE400DCA4FC /* Frameworks */,
+				0973717919D30EE400DCA4FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RaspRemoteOSX;
+			productName = RaspRemoteOSX;
+			productReference = 0973717B19D30EE400DCA4FC /* RaspRemoteOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0973718E19D30EE400DCA4FC /* RaspRemoteOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0973719C19D30EE400DCA4FC /* Build configuration list for PBXNativeTarget "RaspRemoteOSXTests" */;
+			buildPhases = (
+				0973718B19D30EE400DCA4FC /* Sources */,
+				0973718C19D30EE400DCA4FC /* Frameworks */,
+				0973718D19D30EE400DCA4FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0973719119D30EE400DCA4FC /* PBXTargetDependency */,
+			);
+			name = RaspRemoteOSXTests;
+			productName = RaspRemoteOSXTests;
+			productReference = 0973718F19D30EE400DCA4FC /* RaspRemoteOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0973717319D30EE400DCA4FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Mads Gadeberg Jensen";
+				TargetAttributes = {
+					0973717A19D30EE400DCA4FC = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					0973718E19D30EE400DCA4FC = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 0973717A19D30EE400DCA4FC;
+					};
+				};
+			};
+			buildConfigurationList = 0973717619D30EE400DCA4FC /* Build configuration list for PBXProject "RaspRemoteOSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0973717219D30EE400DCA4FC;
+			productRefGroup = 0973717C19D30EE400DCA4FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0973717A19D30EE400DCA4FC /* RaspRemoteOSX */,
+				0973718E19D30EE400DCA4FC /* RaspRemoteOSXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0973717919D30EE400DCA4FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				097371A019D324E700DCA4FC /* 16*16.png in Resources */,
+				0973718719D30EE400DCA4FC /* Images.xcassets in Resources */,
+				095847EF19D5839A00AFEFDD /* SettingsWindowController.xib in Resources */,
+				0973718A19D30EE400DCA4FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0973718D19D30EE400DCA4FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0973717719D30EE400DCA4FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0976741619D43CEF004A3C5F /* TcpService.swift in Sources */,
+				0973718519D30EE400DCA4FC /* AppDelegate.swift in Sources */,
+				0973718119D30EE400DCA4FC /* main.swift in Sources */,
+				095847EE19D5839A00AFEFDD /* SettingsWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0973718B19D30EE400DCA4FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0973719619D30EE400DCA4FC /* RaspRemoteOSXTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0973719119D30EE400DCA4FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0973717A19D30EE400DCA4FC /* RaspRemoteOSX */;
+			targetProxy = 0973719019D30EE400DCA4FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0973718819D30EE400DCA4FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0973718919D30EE400DCA4FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0973719719D30EE400DCA4FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0973719819D30EE400DCA4FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0973719A19D30EE400DCA4FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RaspRemoteOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RaspRemoteOSX-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0973719B19D30EE400DCA4FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RaspRemoteOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RaspRemoteOSX-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		0973719D19D30EE400DCA4FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RaspRemoteOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaspRemoteOSX.app/Contents/MacOS/RaspRemoteOSX";
+			};
+			name = Debug;
+		};
+		0973719E19D30EE400DCA4FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RaspRemoteOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaspRemoteOSX.app/Contents/MacOS/RaspRemoteOSX";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0973717619D30EE400DCA4FC /* Build configuration list for PBXProject "RaspRemoteOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0973719719D30EE400DCA4FC /* Debug */,
+				0973719819D30EE400DCA4FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0973719919D30EE400DCA4FC /* Build configuration list for PBXNativeTarget "RaspRemoteOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0973719A19D30EE400DCA4FC /* Debug */,
+				0973719B19D30EE400DCA4FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0973719C19D30EE400DCA4FC /* Build configuration list for PBXNativeTarget "RaspRemoteOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0973719D19D30EE400DCA4FC /* Debug */,
+				0973719E19D30EE400DCA4FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0973717319D30EE400DCA4FC /* Project object */;
+}
