@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RaspRemoteOSX/TcpService.swift"
-            timestampString = "433456499.078207"
+            filePath = "RaspRemoteOSX/AppDelegate.swift"
+            timestampString = "433685257.542599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "stream(_:handleEvent:)"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "applicationDidFinishLaunching(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,45 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RaspRemoteOSX/AppDelegate.swift"
-            timestampString = "433454626.92221"
+            filePath = "RaspRemoteOSX/SettingsWindowController.swift"
+            timestampString = "434227020.964313"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "applicationDidFinishLaunching(_:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "windowDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RaspRemoteOSX/SettingsWindowController.swift"
+            timestampString = "434227020.964313"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "closeBtn(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RaspRemoteOSX/TcpService.swift"
+            timestampString = "434227886.624071"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "initOutputStream(_:Port:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

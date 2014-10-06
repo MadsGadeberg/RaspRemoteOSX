@@ -14,8 +14,12 @@
 		0973718719D30EE400DCA4FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0973718619D30EE400DCA4FC /* Images.xcassets */; };
 		0973718A19D30EE400DCA4FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0973718819D30EE400DCA4FC /* Main.storyboard */; };
 		0973719619D30EE400DCA4FC /* RaspRemoteOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973719519D30EE400DCA4FC /* RaspRemoteOSXTests.swift */; };
-		097371A019D324E700DCA4FC /* 16*16.png in Resources */ = {isa = PBXBuildFile; fileRef = 0973719F19D324E700DCA4FC /* 16*16.png */; };
+		097371A019D324E700DCA4FC /* RaspRemoteGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 0973719F19D324E700DCA4FC /* RaspRemoteGray.png */; };
 		0976741619D43CEF004A3C5F /* TcpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976741519D43CEF004A3C5F /* TcpService.swift */; };
+		09BED8B519DEC42200A4F371 /* RaspRemoteOffline.png in Resources */ = {isa = PBXBuildFile; fileRef = 09BED8B319DEC42200A4F371 /* RaspRemoteOffline.png */; };
+		09BED8B619DEC42200A4F371 /* RaspRemoteOnline.png in Resources */ = {isa = PBXBuildFile; fileRef = 09BED8B419DEC42200A4F371 /* RaspRemoteOnline.png */; };
+		09D9901619E1DA2400259151 /* RaspRemote.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D9901519E1DA2400259151 /* RaspRemote.png */; };
+		09D9901A19E1DCA600259151 /* RaspRemoteIcon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 09D9901919E1DCA600259151 /* RaspRemoteIcon.iconset */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +44,13 @@
 		0973718F19D30EE400DCA4FC /* RaspRemoteOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaspRemoteOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0973719419D30EE400DCA4FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0973719519D30EE400DCA4FC /* RaspRemoteOSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaspRemoteOSXTests.swift; sourceTree = "<group>"; };
-		0973719F19D324E700DCA4FC /* 16*16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "16*16.png"; sourceTree = "<group>"; };
+		0973719F19D324E700DCA4FC /* RaspRemoteGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RaspRemoteGray.png; sourceTree = "<group>"; };
 		0976741519D43CEF004A3C5F /* TcpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TcpService.swift; sourceTree = "<group>"; };
 		0976741919D442DA004A3C5F /* RaspRemoteOSX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RaspRemoteOSX-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		09BED8B319DEC42200A4F371 /* RaspRemoteOffline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RaspRemoteOffline.png; sourceTree = "<group>"; };
+		09BED8B419DEC42200A4F371 /* RaspRemoteOnline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RaspRemoteOnline.png; sourceTree = "<group>"; };
+		09D9901519E1DA2400259151 /* RaspRemote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RaspRemote.png; sourceTree = "<group>"; };
+		09D9901919E1DCA600259151 /* RaspRemoteIcon.iconset */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = RaspRemoteIcon.iconset; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		0973717219D30EE400DCA4FC = {
 			isa = PBXGroup;
 			children = (
+				09D9901919E1DCA600259151 /* RaspRemoteIcon.iconset */,
 				0973717D19D30EE400DCA4FC /* RaspRemoteOSX */,
 				0973719219D30EE400DCA4FC /* RaspRemoteOSXTests */,
 				0973717C19D30EE400DCA4FC /* Products */,
@@ -99,7 +108,10 @@
 		0973717E19D30EE400DCA4FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0973719F19D324E700DCA4FC /* 16*16.png */,
+				09D9901519E1DA2400259151 /* RaspRemote.png */,
+				09BED8B319DEC42200A4F371 /* RaspRemoteOffline.png */,
+				09BED8B419DEC42200A4F371 /* RaspRemoteOnline.png */,
+				0973719F19D324E700DCA4FC /* RaspRemoteGray.png */,
 				0973717F19D30EE400DCA4FC /* Info.plist */,
 				0973718019D30EE400DCA4FC /* main.swift */,
 			);
@@ -203,10 +215,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				097371A019D324E700DCA4FC /* 16*16.png in Resources */,
+				097371A019D324E700DCA4FC /* RaspRemoteGray.png in Resources */,
 				0973718719D30EE400DCA4FC /* Images.xcassets in Resources */,
 				095847EF19D5839A00AFEFDD /* SettingsWindowController.xib in Resources */,
+				09D9901619E1DA2400259151 /* RaspRemote.png in Resources */,
+				09D9901A19E1DCA600259151 /* RaspRemoteIcon.iconset in Resources */,
+				09BED8B619DEC42200A4F371 /* RaspRemoteOnline.png in Resources */,
 				0973718A19D30EE400DCA4FC /* Main.storyboard in Resources */,
+				09BED8B519DEC42200A4F371 /* RaspRemoteOffline.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

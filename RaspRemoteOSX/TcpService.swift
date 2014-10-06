@@ -7,20 +7,23 @@
 //
 
 import Foundation
+import AppKit
 
+// TcpService i a class that is responsible for sending messages over tcp streams.
 public class TcpService : NSObject, NSStreamDelegate{
-    var inputStream: NSInputStream?
-    var outputStream: NSOutputStream?
+    private var outputStream: NSOutputStream?
     
     var ipAddress: String = "192.168.1.18"
     var port: Int = 8888
     
+    // sets up Outputstream and opens it.
     func initOutputStream(){
         self.initOutputStream(self.ipAddress, Port: self.port)
     }
     
-    // sets up the streams and opens them.
+    // updates Address and port, then sets up OutputStream and opens it.
     func initOutputStream(IP: String, Port: Int){
+        updateAddress(IP, port: Port)
         var writeStream: Unmanaged<CFWriteStream>?
         
         CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, IP as NSString, UInt32(Port), nil, &writeStream)
@@ -34,29 +37,22 @@ public class TcpService : NSObject, NSStreamDelegate{
         self.outputStream?.open()
     }
     
-    public func SendMsg(msg:String) -> Int{
+    // Sends a message
+    func SendMsg(msg:String) -> Int{
         return outputStream!.write(msg, maxLength: countElements(msg))
     }
-    
-    // sets up the streams and opens them.
-    func initInputStream(Port: Int){
-        var readStream: Unmanaged<CFReadStream>?
-        
-        let IPAdresses: [String] = getIFAddresses()
-        let address = IPAdresses.count == 0 ? "localhost" : IPAdresses[0]
-        
-        CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, address as NSString, UInt32(Port), &readStream, nil)
-        
-        inputStream = readStream?.takeUnretainedValue();
-        
-        self.inputStream!.delegate = self
-        
-        self.inputStream!.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
-        
-        self.inputStream?.open()
+    // Sends a byte
+    func Send(var msg:Byte) -> Int{
+        return outputStream!.write(&msg , maxLength: 1)
     }
     
-    func getIFAddresses() -> [String] {
+    // returns the status of Outputstream
+    func Status() -> NSStreamStatus?{
+        return outputStream?.streamStatus
+    }
+    
+    //returns a list of the compiters IpAddresses
+    private func getIFAddresses() -> [String] {
         var addresses = [String]()
         
         // Get list of all interfaces on the local machine:
@@ -89,6 +85,12 @@ public class TcpService : NSObject, NSStreamDelegate{
         return addresses
     }
     
+    //updates ipAddress and port
+    private func updateAddress(let ipAddress: String, let port: Int){
+        self.ipAddress = ipAddress
+        self.port = port
+    }
+    
     // Eventhandler
     func stream(aStream: NSStream!, handleEvent eventCode: NSStreamEvent){
         switch eventCode {
@@ -97,6 +99,7 @@ public class TcpService : NSObject, NSStreamDelegate{
             println("None")
             break
         case NSStreamEvent.OpenCompleted:
+            // update logo and set label to Connected
             println("Opened")
             break
         case NSStreamEvent.HasSpaceAvailable:
@@ -106,6 +109,13 @@ public class TcpService : NSObject, NSStreamDelegate{
             println("HasBytesAvailable")
             break
         case NSStreamEvent.ErrorOccurred:
+//            var theError = aStream.streamError
+//            var theAlert = NSAlert()
+//            theAlert.messageText = "Error reading stream!"
+//            theAlert.informativeText = "Error \(theError.code): \(theError.localizedDescription)"
+//            theAlert.addButtonWithTitle("OK")
+//            theAlert.runModal()
+//            aStream.close()
             println("Can not connect to the host!")
             break
         case NSStreamEvent.EndEncountered:
