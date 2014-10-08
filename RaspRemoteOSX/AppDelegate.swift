@@ -13,7 +13,7 @@ import Cocoa
     
     var statusItem: NSStatusItem?
     var tcpService: TcpService = TcpService()
-    var settingsWindowController = SettingsWindowController(windowNibName: "SettingsWindowController")
+    var settingsWindowController = SettingsWindowController(windowNibName: "SettingsWindowController:")
     
     public func applicationDidFinishLaunching(aNotification: NSNotification?) {
         let bar = NSStatusBar.systemStatusBar()
@@ -21,6 +21,10 @@ import Cocoa
         statusItem!.menu = statusMenu
         updateLogo()
         statusItem!.highlightMode = true
+        
+        NSWorkspace.sharedWorkspace().notificationCenter.addObserver(self, selector: "recieveSleepNotification:", name: NSWorkspaceWillSleepNotification, object: nil)
+        NSWorkspace.sharedWorkspace().notificationCenter.addObserver(self, selector: "recievePowerOffNotification:", name: NSWorkspaceWillPowerOffNotification, object: nil)
+        NSWorkspace.sharedWorkspace().notificationCenter.addObserver(self, selector: "recieveWakeNotification:", name: NSWorkspaceDidWakeNotification, object: nil)
         
         let queue = NSOperationQueue()
         queue.addOperationWithBlock({
@@ -34,19 +38,19 @@ import Cocoa
     }
     
     @IBAction func Chnl_0_ON(sender: AnyObject) {
-        tcpService.Send(0x01)           //0000 0001
+        //tcpService.Send(0x01)           //0000 0001
         tcpService.SendMsg("0 1")       //0000 0001
     }
     @IBAction func Chnl_0_OFF(sender: AnyObject) {
-        tcpService.Send(0x00)           //0000 0001
+        //tcpService.Send(0x00)           //0000 0001
         tcpService.SendMsg("0 0")       //0000 0000
     }
     @IBAction func Chnl_1_ON(sender: AnyObject) {
-        tcpService.Send(0x03)           //0000 0001
+        //tcpService.Send(0x03)           //0000 0001
         tcpService.SendMsg("1 1")       //0000 0011
     }
     @IBAction func Chnl_1_OFF(sender: AnyObject) {
-        tcpService.Send(0x02)           //0000 0001
+        //tcpService.Send(0x02)           //0000 0001
         tcpService.SendMsg("1 0")       //0000 0010
     }
     
@@ -65,6 +69,16 @@ import Cocoa
         } else {
             statusItem!.image = NSImage(byReferencingFile: NSBundle.mainBundle().pathForResource("RaspRemoteOffline", ofType: "png"))
         }
+    }
+    
+    func recieveSleepNotification(sender: AnyObject){
+        tcpService.SendMsg("1 1")
+    }
+    func recievePowerOffNotification(sender: AnyObject){
+        tcpService.SendMsg("1 1")
+    }
+    func recieveWakeNotification(sender: AnyObject){
+        tcpService.SendMsg("1 0")
     }
 }
 
