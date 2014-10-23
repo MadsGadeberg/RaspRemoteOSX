@@ -19,18 +19,23 @@ import Cocoa
         let bar = NSStatusBar.systemStatusBar()
         statusItem = bar.statusItemWithLength(20)
         statusItem!.menu = statusMenu
-        updateLogo()
         statusItem!.highlightMode = true
         
         NSWorkspace.sharedWorkspace().notificationCenter.addObserver(self, selector: "recieveSleepNotification:", name: NSWorkspaceWillSleepNotification, object: nil)
         NSWorkspace.sharedWorkspace().notificationCenter.addObserver(self, selector: "recievePowerOffNotification:", name: NSWorkspaceWillPowerOffNotification, object: nil)
         NSWorkspace.sharedWorkspace().notificationCenter.addObserver(self, selector: "recieveWakeNotification:", name: NSWorkspaceDidWakeNotification, object: nil)
         
-        let queue = NSOperationQueue()
-        queue.addOperationWithBlock({
-            self.tcpService.initOutputStream()
+        NSRunLoop.currentRunLoop().addTimer( NSTimer(timeInterval: 0.5, target: self, selector: "connect", userInfo: nil, repeats: true), forMode: NSRunLoopCommonModes)
+            
+//        NSOperationQueue().addOperationWithBlock({ self.connectionLoop() })
+    }
+    
+    func connect(){
+        if self.tcpService.Status() != NSStreamStatus.Open && self.tcpService.Status() != NSStreamStatus.Opening{
+            tcpService.initOutputStream()
             self.updateLogo()
-        })
+            println("connecting")
+        }
     }
     
     public func applicationWillTerminate(aNotification: NSNotification?) {
@@ -61,13 +66,13 @@ import Cocoa
     }
     
     public func updateLogo(){
-        statusItem!.image = NSImage(byReferencingFile: NSBundle.mainBundle().pathForResource("RaspRemoteGray", ofType: "png"))
+        statusItem!.image = NSImage(byReferencingFile: NSBundle.mainBundle().pathForResource("RaspRemoteGray", ofType: "png")!)
         while (tcpService.Status() == NSStreamStatus.Opening){}
         
         if (tcpService.Status() == NSStreamStatus.Open){
-            statusItem!.image = NSImage(byReferencingFile: NSBundle.mainBundle().pathForResource("RaspRemoteOnline", ofType: "png"))
+            statusItem!.image = NSImage(byReferencingFile: NSBundle.mainBundle().pathForResource("RaspRemoteOnline", ofType: "png")!)
         } else {
-            statusItem!.image = NSImage(byReferencingFile: NSBundle.mainBundle().pathForResource("RaspRemoteOffline", ofType: "png"))
+            statusItem!.image = NSImage(byReferencingFile: NSBundle.mainBundle().pathForResource("RaspRemoteOffline", ofType: "png")!)
         }
     }
     

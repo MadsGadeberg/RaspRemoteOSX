@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RaspRemoteOSX/AppDelegate.swift"
-            timestampString = "433685257.542599"
+            timestampString = "435760755.136142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "applicationDidFinishLaunching(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RaspRemoteOSX/SettingsWindowController.swift"
-            timestampString = "434227020.964313"
+            timestampString = "435760755.136142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "windowDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RaspRemoteOSX/SettingsWindowController.swift"
-            timestampString = "434227020.964313"
+            timestampString = "435760755.136142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "closeBtn(_:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "windowDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

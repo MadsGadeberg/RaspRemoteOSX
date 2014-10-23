@@ -38,7 +38,7 @@ class SettingsWindowController: NSWindowController {
         appDelegate = NSApplication.sharedApplication().delegate as? AppDelegate    // returns nil
         if appDelegate != nil{
             self.port.stringValue = String((appDelegate?.tcpService.port)!)
-            self.ipAddress.stringValue = appDelegate?.tcpService.ipAddress
+            self.ipAddress.stringValue = appDelegate!.tcpService.ipAddress
         }
         
         //updateConnectionString()
