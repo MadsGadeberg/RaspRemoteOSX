@@ -27,14 +27,12 @@ import Cocoa
         
         NSRunLoop.currentRunLoop().addTimer( NSTimer(timeInterval: 0.5, target: self, selector: "connect", userInfo: nil, repeats: true), forMode: NSRunLoopCommonModes)
             
-//        NSOperationQueue().addOperationWithBlock({ self.connectionLoop() })
     }
     
     func connect(){
         if self.tcpService.Status() != NSStreamStatus.Open && self.tcpService.Status() != NSStreamStatus.Opening{
             tcpService.initOutputStream()
             self.updateLogo()
-            println("connecting")
         }
     }
     
