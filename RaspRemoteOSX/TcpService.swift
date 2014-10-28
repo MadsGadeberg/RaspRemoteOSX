@@ -37,6 +37,10 @@ public class TcpService : NSObject, NSStreamDelegate{
         self.outputStream?.open()
     }
     
+    func disconnect(){
+        outputStream?.close()
+    }
+    
     // Sends a message
     func SendMsg(msg:String) -> Int{
         return outputStream!.write(msg, maxLength: countElements(msg))

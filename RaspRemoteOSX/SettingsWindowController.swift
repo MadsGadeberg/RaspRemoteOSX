@@ -15,22 +15,18 @@ class SettingsWindowController: NSWindowController {
     @IBOutlet weak var connectionLabel: NSTextField!
     
     @IBAction func connect(sender: AnyObject) {
-        if (appDelegate != nil){
-            appDelegate?.tcpService.initOutputStream(self.ipAddress.stringValue, Port: self.port.integerValue)
+//        fatalError("not implemented yet")
+        // set new ip and port
+        if appDelegate != nil{
+            appDelegate!.tcpService.port = self.port.integerValue
+            appDelegate!.tcpService.ipAddress = self.ipAddress.stringValue
             
-            let queue = NSOperationQueue()
-            queue.addOperationWithBlock({
-                self.updateConnectionString()
-                self.appDelegate?.updateLogo()
-            })
+            // Connect again
+            appDelegate!.tcpService.disconnect()
+            NSOperationQueue().addOperationWithBlock({ self.updateConnectionString() })
         }
     }
     
-    @IBAction func closeBtn(sender: AnyObject) {
-        if (appDelegate != nil){
-//            appDelegate?.tcpService.close()
-        }
-    }
     override func windowDidLoad() {
         super.windowDidLoad()
         
@@ -42,19 +38,12 @@ class SettingsWindowController: NSWindowController {
         }
         
         //updateConnectionString()
-        let queue = NSOperationQueue()
-        queue.addOperationWithBlock({
-            self.updateConnectionString()
-        })
+        NSRunLoop.currentRunLoop().addTimer( NSTimer(timeInterval: 0.5, target: self, selector: "updateConnectionString", userInfo: nil, repeats: true), forMode: NSRunLoopCommonModes)
+        NSOperationQueue().addOperationWithBlock({ self.updateConnectionString() })
     }
     
     // Method that updates connectionstring
-    private func updateConnectionString(){
-        // wait to set label until connected
-        connectionLabel?.stringValue = "Connecting..."
-        while self.appDelegate?.tcpService.Status() == NSStreamStatus.Opening{
-        }
-        
+    func updateConnectionString(){
         if  self.appDelegate?.tcpService.Status() == NSStreamStatus.Open{
             connectionLabel.stringValue = "Open"
         } else if self.appDelegate?.tcpService.Status() == NSStreamStatus.Opening{

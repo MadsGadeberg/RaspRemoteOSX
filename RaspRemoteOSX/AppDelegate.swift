@@ -13,7 +13,7 @@ import Cocoa
     
     var statusItem: NSStatusItem?
     var tcpService: TcpService = TcpService()
-    var settingsWindowController = SettingsWindowController(windowNibName: "SettingsWindowController:")
+    var settingsWindowController = SettingsWindowController(windowNibName: "SettingsWindowController")
     
     public func applicationDidFinishLaunching(aNotification: NSNotification?) {
         let bar = NSStatusBar.systemStatusBar()
@@ -32,7 +32,7 @@ import Cocoa
     func connect(){
         if self.tcpService.Status() != NSStreamStatus.Open && self.tcpService.Status() != NSStreamStatus.Opening{
             tcpService.initOutputStream()
-            self.updateLogo()
+            NSOperationQueue().addOperationWithBlock({ self.updateLogo() })
         }
     }
     
@@ -64,11 +64,10 @@ import Cocoa
     }
     
     public func updateLogo(){
-        statusItem!.image = NSImage(byReferencingFile: NSBundle.mainBundle().pathForResource("RaspRemoteGray", ofType: "png")!)
-        while (tcpService.Status() == NSStreamStatus.Opening){}
-        
         if (tcpService.Status() == NSStreamStatus.Open){
             statusItem!.image = NSImage(byReferencingFile: NSBundle.mainBundle().pathForResource("RaspRemoteOnline", ofType: "png")!)
+        } else if (tcpService.Status() == NSStreamStatus.Opening){
+            statusItem!.image = NSImage(byReferencingFile: NSBundle.mainBundle().pathForResource("RaspRemoteGray", ofType: "png")!)
         } else {
             statusItem!.image = NSImage(byReferencingFile: NSBundle.mainBundle().pathForResource("RaspRemoteOffline", ofType: "png")!)
         }
